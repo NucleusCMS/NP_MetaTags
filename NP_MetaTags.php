@@ -49,7 +49,7 @@ class NP_MetaTags extends NucleusPlugin {
 		return 'http://blog.cles.jp/np_cles/category/31/subcatid/4';
 	}
 	function getVersion() {
-		return '1.8';
+		return '1.8.1';
 	}
 	function getDescription() {
 		return '[$Revision: 1.118 $]<br />This plug-in This plug-in inserts a &lt;META&gt; tag (robots, description, keywords), by using &lt;%MetaTags%&gt;';
