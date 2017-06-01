@@ -262,7 +262,7 @@ class NP_MetaTags extends NucleusPlugin {
 			ACTIONLOG :: add(WARNING, 'NP_MetaTags: AsyncHTTP Error['.$ahttp->getErrorNo(0).']'.$ahttp->getError(0));
 		
 		if( $data ){
-			$p =& new NP_MetaTags_MA_XMLParser();
+			$p = new NP_MetaTags_MA_XMLParser();
 			$words = $p->parse($data);
 			if( $p->isError ){
 				ACTIONLOG :: add(WARNING, 'NP_MetaTags: Y!API Error( '. (isset($rawtokens[0]) ? $rawtokens[0] : 'Unknown Error -> '.$data) . ' )');
@@ -301,7 +301,7 @@ class NP_MetaTags extends NucleusPlugin {
 				
 				foreach( $requests as $id => $word ){
 					if( $respXml = $responses[$id] ){
-						$p =& new NP_MetaTags_WS_XMLParser();
+						$p = new NP_MetaTags_WS_XMLParser();
 						list($totalResultsAvailable) = $p->parse($respXml);
 						if( $p->isError ){
 							ACTIONLOG :: add(WARNING, 'NP_MetaTags: Y!API Error( '. (isset($totalResultsAvailable) ? $totalResultsAvailable : 'Unknown Error') . ' )');
